@@ -1,0 +1,51 @@
+<html>
+<head>
+   <title>Open webcam using JavaScript. </title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Number Plate Recognition</title>
+   <link rel="stylesheet" href="../MYCSS/number_plate_video.css">
+</head>
+<body>
+   <div class="home-page">
+      <div class="sub-div-home">
+         <h1>Live Number Plate Recognition</h1>
+      </div>
+      <div class="sub-div-home1">
+         <button id="startBtn" onclick="openCam()">Open Webcam</button>
+     
+         <video id="videoCam"></video>
+         <script>
+            function openCam(){
+               let All_mediaDevices=navigator.mediaDevices
+               if (!All_mediaDevices || !All_mediaDevices.getUserMedia) {
+                  console.log("getUserMedia() not supported.");
+                  return;
+               }
+               All_mediaDevices.getUserMedia({
+                  audio: true,
+                  video: true
+               })
+               .then(function(vidStream) {
+                  var video = document.getElementById('videoCam');
+                  if ("srcObject" in video) {
+                     video.srcObject = vidStream;
+                  } else {
+                     video.src = window.URL.createObjectURL(vidStream);
+                  }
+                  video.onloadedmetadata = function(e) {
+                     video.play();
+                  };
+               })
+               .catch(function(e) {
+                  console.log(e.name + ": " + e.message);
+               });
+            }
+         </script>
+      </div>
+     
+  </div>
+
+ 
+</body>
+</html>

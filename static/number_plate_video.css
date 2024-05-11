@@ -1,0 +1,82 @@
+/* CSS for Open WebCam Using JavaScript */
+
+/* Center align the content */
+.home-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300%;
+    margin: 0;
+    /* background-image: url("file:///D:/AIML-CODING/DEEPLEARING/what-is-anpr.webp"); */
+    /* background-image: url("file:///C:/Users/Y MANIKANTA SWAMY/Pictures/num2.jpg"); */
+    font-family: Arial, sans-serif;
+    background-color: bisque;
+    background-image: cover;
+}
+.sub-div-home {
+    position: absolute;
+    top: 0;
+    width: 80%;
+    height: 20%;
+    padding: 5%;
+    margin: 15px;
+    background-color: rgb(20, 123, 171);
+    border-radius: 25px;
+    font-family: Arial, sans-serif;
+}
+
+.sub-div-home1 {
+    position: absolute;
+    top: 35%; /* Adjust as needed to place it below .sub-div-home */
+    width: 80%;
+    height: 50%;
+    padding: 5%;
+    margin: 15px;
+    background-color: rgb(211, 202, 212);
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    /* border-top-left-radius: 10px; Border radius for top-left corner */
+    border-bottom-left-radius: 25px; /* Border radius for bottom-left corner */
+    /* border-top-right-radius: 10px; Border radius for top-right corner */
+    border-bottom-right-radius: 25px;
+}
+
+
+/* Style the heading */
+ h1 {
+    color: #90d739;
+    text-align: center;
+}
+
+/* Style the button */
+
+button {
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    margin: 50px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/*Style the video element */
+
+video {
+    width: 80%;
+    max-width: 400px;
+    height: 300;
+    margin-top: 20px;
+    border: 2px solid #333;
+    border-radius: 5px;
+} 
+
